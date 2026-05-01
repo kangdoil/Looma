@@ -1,0 +1,16 @@
+> next dev
+
+⚠ Port 3000 is in use by process 53657, using available port 3001 instead.
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.219.104:3001
+- Environments: .env.local
+✓ Ready in 263ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          53657
+- Dir:          /Users/dowon/Looma/looma
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 53657 to stop it.
