@@ -65,7 +65,7 @@ export function TopBar({
           className
         )}
       >
-        <span className="whitespace-nowrap font-pretendard text-body-sm text-[var(--color-text-primary)]">
+        <span className="whitespace-nowrap font-pretendard text-body-sm tracking-[0px] text-[var(--color-text-primary)]">
           {title}
         </span>
         <button
