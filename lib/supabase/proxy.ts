@@ -45,15 +45,24 @@ export async function updateSession(request: NextRequest) {
   const { data } = await supabase.auth.getClaims();
   const user = data?.claims;
 
-  if (
-    request.nextUrl.pathname !== "/" &&
-    !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/auth")
-  ) {
-    // no user, potentially respond by redirecting the user to the login page
+  const { pathname } = request.nextUrl;
+
+  // 보호된 경로: 인증 필요
+  const isProtected =
+    pathname.startsWith("/home") ||
+    pathname.startsWith("/record") ||
+    pathname.startsWith("/library");
+
+  if (isProtected && !user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/auth/login";
+    url.pathname = "/login";
+    return NextResponse.redirect(url);
+  }
+
+  // 이미 로그인된 상태에서 /login 접근 시 /home으로
+  if (pathname === "/login" && user) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/home";
     return NextResponse.redirect(url);
   }
 

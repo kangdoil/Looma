@@ -29,6 +29,87 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* ── Looma Primitives ── */
+    --looma-black: #000000;
+    --looma-white: #ffffff;
+    --looma-gray-950: #191919;
+    --looma-gray-900: #1a1a1a;
+    --looma-gray-850: #212121;
+    --looma-gray-800: #2c2c2c;
+    --looma-gray-750: #2d2d2d;
+    --looma-gray-700: #383838;
+    --looma-gray-650: #434343;
+    --looma-gray-400: #4a4a4a;
+    --looma-gray-200: #c7c7c7;
+    --looma-gray-100: #d9d9d9;
+    --looma-gray-50: #ededed;
+    --looma-blue-800: #415c73;
+    --looma-blue-400: #74a4cc;
+    --looma-blue-200: #91cdff;
+    --looma-yellow-100: #efedcb;
+    --looma-yellow-200: #fffa9f;
+    /* alpha variants */
+    --looma-gray-50-8: #ededed14;
+    --looma-blue-200-12: #91cdff1f;
+    --looma-gray-750-40: #2d2d2d66;
+    /* shadow colors */
+    --looma-shadow-card: #1a1a1a66;
+    --looma-shadow-overlay: #0c0c0d99;
+    --looma-shadow-subtle: #19191926;
+    --looma-shadow-accent-blue: #91cdff66;
+    --looma-shadow-float: #00000033;
+    --looma-shadow-sm: #0000001f;
+    --looma-shadow-md: #0000001a;
+    --looma-shadow-image: #00000066;
+    --looma-shadow-inner-highlight: #ffffff33;
+    --looma-shadow-inner-glow: #ffffff40;
+
+    /* ── Looma Semantic Colors ── */
+    --color-bg-primary: var(--looma-gray-900);
+    --color-bg-surface: var(--looma-gray-850);
+    --color-bg-elevated: var(--looma-gray-800);
+    --color-bg-card: var(--looma-gray-750);
+    --color-bg-input: var(--looma-gray-700);
+    --color-bg-glass: var(--looma-gray-50-8);
+    --color-bg-main-blur: var(--looma-blue-200-12);
+    --color-bg-black-blur: var(--looma-gray-750-40);
+    --color-text-primary: var(--looma-white);
+    --color-text-secondary: var(--looma-gray-50);
+    --color-text-tertiary: var(--looma-gray-200);
+    --color-text-disabled: var(--looma-gray-400);
+    --color-component-primary: var(--looma-blue-200);
+    --color-component-secondary: var(--looma-blue-400);
+    --color-component-tertiary: var(--looma-blue-800);
+    --color-component-highlight: var(--looma-yellow-200);
+    --color-border-default: var(--looma-gray-700);
+    --color-border-subtle: var(--looma-gray-750);
+    --color-border-accent: var(--looma-blue-200);
+    --color-border-highlight: var(--looma-yellow-100);
+
+    /* ── Looma Gradients ── */
+    --gradient-accent-blue-light: linear-gradient(-2.08deg, #abd9ff 4.12%, #61b7ff 94.99%);
+
+    /* ── Looma Shadows ── */
+    --shadow-btn-container:
+      0 2px 8px var(--looma-shadow-subtle), 0 4px 40px var(--looma-shadow-overlay);
+    --shadow-card: 0 4px 20px var(--looma-shadow-card);
+    --shadow-overlay: 0 4px 40px var(--looma-shadow-overlay);
+    --shadow-subtle: 0 2px 8px var(--looma-shadow-subtle);
+    --shadow-accent-blue: 0 4px 20px var(--looma-shadow-accent-blue);
+    --shadow-float: 0 -4px 20px var(--looma-shadow-float);
+    --shadow-sm: 0 3px 6px var(--looma-shadow-sm);
+    --shadow-md: 0 4px 8px var(--looma-shadow-md);
+    --shadow-image: 0 0 40px var(--looma-shadow-image);
+    --shadow-inner-highlight: inset 0 2px 6px var(--looma-shadow-inner-highlight);
+    --shadow-inner-glow: inset 0 4px 20px var(--looma-shadow-inner-glow);
+
+    /* ── Looma Border Radius ── */
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 32px;
+    --radius-full: 9999px;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -64,5 +145,30 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .looma-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-component-primary) var(--color-bg-elevated);
+  }
+  .looma-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+  .looma-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-full);
+  }
+  .looma-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-component-primary);
+    border-radius: var(--radius-full);
   }
 }
