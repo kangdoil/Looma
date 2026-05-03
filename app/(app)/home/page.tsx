@@ -35,7 +35,7 @@ const recordTypeCardSurfaceStyle = {
 } as const;
 
 const recordTypeCardButtonClass =
-  "relative z-10 flex h-[166px] w-[166px] flex-col justify-between rounded-[32px] border border-[rgba(255,255,255,0.08)] p-4 text-left transition-[transform,opacity] duration-300 ease-out hover:-translate-y-2 motion-reduce:hover:translate-y-0 active:translate-y-0 active:opacity-70";
+  "relative z-10 flex h-[166px] w-[166px] flex-col justify-between rounded-[32px] border border-[rgba(255,255,255,0.08)] p-4 text-left transition-[transform,opacity] duration-300 ease-out hover:-translate-y-2 motion-reduce:hover:translate-y-0 active:translate-y-0 active:opacity-70 sm:h-[200px] sm:w-[200px] md:h-[240px] md:w-[240px]";
 
 function HomeContent() {
   const router = useRouter();
@@ -51,13 +51,13 @@ function HomeContent() {
           <h1 className="font-pretendard text-display-lg text-[var(--color-text-primary)]">
             Looma
           </h1>
-          <p className="font-pretendard text-body-sm text-[var(--color-text-tertiary)]">
+          <p className="font-pretendard text-body-sm tracking-[-1px] text-[var(--color-text-tertiary)]">
             업무 노하우를 시각적 자산으로 남겨보세요.
           </p>
         </div>
 
         {/* 기록 유형 카드 — 뒤쪽 대비 레이어가 있어야 단색 배경에서도 backdrop 블러가 보임 */}
-        <div className="relative isolate flex gap-[10px] py-6">
+        <div className="relative isolate flex gap-[10px] py-6 sm:gap-4 md:gap-6">
           {/* <div
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[232px] w-[384px] -translate-x-1/2 -translate-y-1/2"

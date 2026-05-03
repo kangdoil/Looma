@@ -16,7 +16,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-[375px] flex-col items-center justify-between bg-[var(--color-bg-primary)] px-8 py-16">
+    <div className="mx-auto flex min-h-screen max-w-[768px] flex-col items-center justify-between bg-[var(--color-bg-primary)] px-8 py-16 sm:px-16 md:px-24">
       {/* 상단: 브랜딩 */}
       <div className="flex w-full flex-col items-start gap-3 pt-16">
         <h1 className="font-pretendard text-display-lg leading-tight tracking-tight text-[var(--color-component-primary)]">

@@ -13,7 +13,7 @@ export function AppNav() {
   if (!showBottomBar) return null;
 
   return (
-    <div className="sticky bottom-0 flex justify-center bg-[var(--color-bg-primary)] pb-6 pt-2">
+    <div className="sticky bottom-0 flex justify-center bg-[var(--color-bg-primary)] pb-6 pt-2 sm:pb-8">
       <BottomBar
         active={activeTab}
         onHomeClick={() => router.push("/home")}

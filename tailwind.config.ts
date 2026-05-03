@@ -104,9 +104,9 @@ export default {
           "24px",
           { lineHeight: "32px", letterSpacing: "-0.125rem", fontWeight: "600" },
         ],
-        "body-lg": ["17px", { lineHeight: "24px", letterSpacing: "-0.125rem", fontWeight: "600" }],
-        "body-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.125rem", fontWeight: "400" }],
-        "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "-0.125rem", fontWeight: "400" }],
+        "body-lg": ["17px", { lineHeight: "24px", letterSpacing: "0", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0", fontWeight: "400" }],
+        "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0", fontWeight: "400" }],
         caption: ["12px", { lineHeight: "16px", letterSpacing: "-0.125rem", fontWeight: "400" }],
       },
       backgroundImage: {

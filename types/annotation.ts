@@ -12,6 +12,7 @@ export interface AnnotationDraft {
   id: string;
   xRatio: number;
   yRatio: number;
+  name: string;
   problem: string;
   solution: string;
 }

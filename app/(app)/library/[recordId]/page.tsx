@@ -89,6 +89,7 @@ const DUMMY_ANNOTATIONS: AnnotationDraft[] = [
     id: "a1",
     xRatio: 0.3,
     yRatio: 0.35,
+    name: "아이콘 불균형",
     problem: "아이콘 크기가 텍스트와 맞지 않아 시각적 불균형이 생김",
     solution: "8px 기준 그리드로 아이콘 크기를 조정하고 stroke-width를 1.5로 통일",
   },
@@ -96,6 +97,7 @@ const DUMMY_ANNOTATIONS: AnnotationDraft[] = [
     id: "a2",
     xRatio: 0.7,
     yRatio: 0.6,
+    name: "색상 대비 문제",
     problem: "색상 대비가 낮아 가독성 문제 발생",
     solution: "WCAG AA 기준 4.5:1 이상의 대비율로 팔레트 재정의",
   },
@@ -128,7 +130,7 @@ function RecordDetail() {
         onRightAction={() => {}}
       />
 
-      <div className="flex flex-col gap-4 px-4 pb-32 pt-4">
+      <div className="flex flex-col gap-4 px-4 pb-32 pt-4 sm:px-8 md:px-12">
         {/* 이미지 + 핀 */}
         <AnnotationCanvas
           imageUrl={record.imageUrl}

@@ -61,7 +61,7 @@ export function TopBar({
       <div
         className={cn(
           "flex w-full items-center justify-between",
-          "bg-[var(--color-bg-primary)] px-4 py-2",
+          "bg-[var(--color-bg-primary)] px-4 py-2 sm:px-8 md:px-12",
           className
         )}
       >
@@ -86,7 +86,7 @@ export function TopBar({
       <div
         className={cn(
           "relative flex w-full items-center justify-between overflow-hidden",
-          "bg-[var(--color-bg-primary)] p-4",
+          "bg-[var(--color-bg-primary)] px-4 py-4 sm:px-8 md:px-12",
           className
         )}
       >
@@ -139,7 +139,7 @@ export function TopBar({
       <div
         className={cn(
           "relative flex w-full items-center justify-between overflow-hidden",
-          "bg-[var(--color-bg-black-blur)] p-4",
+          "bg-[var(--color-bg-black-blur)] px-4 py-4 sm:px-8 md:px-12",
           className
         )}
       >
@@ -171,7 +171,7 @@ export function TopBar({
     <div
       className={cn(
         "flex w-full items-center justify-between",
-        "bg-[var(--color-bg-primary)] p-4",
+        "bg-[var(--color-bg-primary)] px-4 py-4 sm:px-8 md:px-12",
         className
       )}
     >

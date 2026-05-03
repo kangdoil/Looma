@@ -12,7 +12,7 @@ export function BottomSheet({ open, children, className }: BottomSheetProps) {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-1/2 w-full max-w-[375px] -translate-x-1/2",
+        "fixed bottom-0 left-1/2 z-50 w-full max-w-[768px] -translate-x-1/2",
         "rounded-t-[var(--radius-md)] bg-[var(--color-bg-surface)]",
         "shadow-overlay transition-transform duration-300 ease-out",
         "border-t border-[var(--color-border-subtle)]",
